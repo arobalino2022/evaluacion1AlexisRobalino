@@ -17,7 +17,7 @@ namespace evaluacion1AlexisRobalino
             InitializeComponent();
             lblUsuario.Text = usuario;
             lblNombre.Text = "El nombre del estudiante es: " + nombre;
-            lblNombre.Text = "El nombre del estudiante es: " + nombre;
+            lblTotal.Text = "El Total apagar es: " + tot;
         }
         private void btnInformacion_Clicked3(object sender, EventArgs e)
         {

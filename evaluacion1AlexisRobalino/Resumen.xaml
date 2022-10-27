@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="evaluacion1AlexisRobalino.Resumen">
+    
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center">
            
@@ -20,7 +21,7 @@
                 <Label x:Name="lblUsuario" Text="." HorizontalTextAlignment="end" FontSize="20" Grid.Row="0" Grid.Column="0"/>
                
                 <Label x:Name="lblNombre" Text="." HorizontalTextAlignment="end" FontSize="20" Grid.Row="0" Grid.Column="1"/>
-                <Label x:Name="lblNombre" Text="." HorizontalTextAlignment="end" FontSize="20" Grid.Row="0" Grid.Column="1"/>
+                <Label x:Name="lblTotal" Text="." HorizontalTextAlignment="end" FontSize="20" Grid.Row="1" Grid.Column="0"/>
               
                 
                

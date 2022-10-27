@@ -30,8 +30,7 @@ namespace evaluacion1AlexisRobalino
                 var notas =  (3000-double.Parse(txtNotaseg.Text))/5+(3000*1.05-3000);
                 var nota = notas;
                 txtNota.Text = nota.ToString();
-                var tot = double.Parse(txtNotaseg.Text) + (3000 - double.Parse(txtNotaseg.Text)) / 5 + (3000 * 1.05 - 3000) * 5;
-                txttot.Text = tot.ToString();
+               
 
 
 
@@ -42,6 +41,8 @@ namespace evaluacion1AlexisRobalino
 
 
             }
+            var tot = double.Parse(txtNotaseg.Text) + (3000 - double.Parse(txtNotaseg.Text)) / 5 + (3000 * 1.05 - 3000) * 5;
+            txttot.Text = tot.ToString();
             else
             {
                 DisplayAlert("Error", "No se ha introducido datos ", "ok");
