@@ -5,18 +5,37 @@
     <ContentPage.Content>
         <StackLayout>
             <Label x:Name="lblUsuario" Text="." HorizontalTextAlignment="end" FontSize="12"/>
-            <Label x:Name="lblClave" Text="." HorizontalTextAlignment="end" FontSize="12"/>
+            <Label x:Name="lblNombre" Text="." HorizontalTextAlignment="end" FontSize="12"/>
             <Label Text="Ventana de Registro"
             
             
              HorizontalOptions="CenterAndExpand" />
             <Image Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png"/>
-            <Entry x:Name="txtNombre" Placeholder="Ingrese su nombre"/>
-            <Entry x:Name="txtApellido" Placeholder="Ingrese su apellido"/>
-            <Label Text="Parcial 1"/>
-            <Entry x:Name="txtNotaseg" Placeholder="Ingrese Monto Inicial"  Keyboard="Numeric" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Ingrese sus nombres" Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="txtNombre" Placeholder="Ingrese sus nombres" Grid.Row="0" Grid.Column="1" />
+                <Label Text="Ingrese Monto Inicial" Grid.Row="1" Grid.Column="0"/>
+                <Entry x:Name="txtNotaseg" Placeholder="Ingrese Monto Inicial" Grid.Row="1" Grid.Column="1">
+                    
+                    
+                </Entry>
+                <Entry x:Name="txtNota" Placeholder="Cuota mensual" Keyboard="Numeric" IsEnabled="False" Grid.Row="2" Grid.Column="1"/>
+                <Entry x:Name="txttot"/>
+            </Grid>
+         
+           
+            
+           
           
-            <Entry x:Name="txtNota" Placeholder="Cuota mensual" Keyboard="Numeric" IsEnabled="False"/>
+            
 
             <Button x:Name="btnInformacion" Text="Calcular cuota mensual" Clicked="btnInformacion_Clicked"/>
 

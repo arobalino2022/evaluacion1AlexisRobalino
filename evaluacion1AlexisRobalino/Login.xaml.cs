@@ -29,7 +29,7 @@ namespace evaluacion1AlexisRobalino
             if (usuario == tUsuario & contrasena == tContrasena)
             {
                 DisplayAlert("Alerta", "USUARIO CORRECTO", "Cerrar");
-                await Navigation.PushAsync(new Registro(txtUsuario.Text, txtContrasena.Text, 39));
+                await Navigation.PushAsync(new Registro(txtUsuario.Text,39));
             }
             else
             {

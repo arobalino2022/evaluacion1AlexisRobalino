@@ -3,10 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="evaluacion1AlexisRobalino.Resumen">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
+        <StackLayout VerticalOptions="Center">
+           
+            <Label Text="Resumen de inscripción"
+                VerticalOptions="Center" 
                 HorizontalOptions="CenterAndExpand" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="lblUsuario" Text="." HorizontalTextAlignment="end" FontSize="20" Grid.Row="0" Grid.Column="0"/>
+               
+                <Label x:Name="lblNombre" Text="." HorizontalTextAlignment="end" FontSize="20" Grid.Row="0" Grid.Column="1"/>
+                <Label x:Name="lblNombre" Text="." HorizontalTextAlignment="end" FontSize="20" Grid.Row="0" Grid.Column="1"/>
+              
+                
+               
+            </Grid>
+          
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -12,73 +12,55 @@ namespace evaluacion1AlexisRobalino
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Registro : ContentPage
     {
-        public Registro(string usuario, string clave, int edad)
+        public Registro(string usuario,  int edad)
         {
             InitializeComponent();
-            lblUsuario.Text = "El usuario conectado es " + usuario;
-            lblClave.Text = "La clave es " + clave;
+            lblUsuario.Text = "El usuario conectado es: " + usuario;
+        
+                
         }
 
         public int Text { get; private set; }
 
         private void btnInformacion_Clicked(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtNotaseg.Text) )
+            if (!string.IsNullOrEmpty(txtNotaseg.Text))
             {
                 string nombre = txtNombre.Text;
-                string apellido = txtApellido.Text;
-                var notas = double.Parse(txtNotaseg.Text) * 0.3;
-                var nota = notas 
+                var notas =  (3000-double.Parse(txtNotaseg.Text))/5+(3000*1.05-3000);
+                var nota = notas;
                 txtNota.Text = nota.ToString();
+                var tot = double.Parse(txtNotaseg.Text) + (3000 - double.Parse(txtNotaseg.Text)) / 5 + (3000 * 1.05 - 3000) * 5;
+                txttot.Text = tot.ToString();
 
 
 
 
-                DisplayAlert("Mensaje de Alerta", "Tu nombre es " + nombre + "\nTu apellido es " + apellido + "\n Tu Nota de Parcial 1 es " + nota, "Cerrar");
+
+
+                DisplayAlert("Mensaje de Alerta", "Tus nombres son: " + nombre + "\n Tu cuota mensual es: " + nota, "Cerrar");
 
 
             }
             else
             {
-                DisplayAlert("Error", "Nose introducido datos ", "ok");
+                DisplayAlert("Error", "No se ha introducido datos ", "ok");
             }
         }
-        
-        private void BtnInformacion_Clicked2(object sender, EventArgs e)
+        private async void BtnInformacion_Clicked2(object sender, EventArgs e)
         {
 
-            var num1 = double.Parse(txtNota.Text);
-         
-            var sumnotas = num1 
-            if (sumnotas >= 7)
-            {
+           
+
+            DisplayAlert("Mensaje de Alerta", "Elemento Guardado", "Cerrar");
+
+            await Navigation.PushAsync(new Resumen(lblUsuario.Text,txtNombre.Text,3750));
 
 
-                {
-
-
-                    DisplayAlert("Mensaje de Alerta", "APROBADO", "Cerrar");
-
-                }
-            }
-            if (sumnotas >= 5 && sumnotas < 7)
-            {
-
-
-                {
-
-
-                    DisplayAlert("Mensaje de Alerta", "COMPLEMENTARIO", "Cerrar");
-
-                }
-            }
-
-            if (sumnotas < 5)
-            {
-                DisplayAlert("Mensaje de Alerta", "REPROBADO", "Cerrar");
-            }
         }
 
     }
-
 }
+        
+       
+
