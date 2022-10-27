@@ -19,7 +19,7 @@
                 </Grid.ColumnDefinitions>
                 <Label Text="Ingrese el usuario" Grid.Row="0" Grid.Column="0"/>
                 <Entry x:Name="txtUsuario" Placeholder="Ingrese su Usuario" Grid.Row="0" Grid.Column="1" />
-                <Label Text="Ingrese el usuario" Grid.Row="1" Grid.Column="0"/>
+                <Label Text="Ingrese la clave" Grid.Row="1" Grid.Column="0"/>
                 <Entry x:Name="txtContrasena" Placeholder="Ingrese su Contraseña" IsPassword="true" Grid.Row="1" Grid.Column="1">
                 </Entry>
             </Grid>

@@ -41,8 +41,7 @@ namespace evaluacion1AlexisRobalino
 
 
             }
-            var tot = double.Parse(txtNotaseg.Text) + (3000 - double.Parse(txtNotaseg.Text)) / 5 + (3000 * 1.05 - 3000) * 5;
-            txttot.Text = tot.ToString();
+            
             else
             {
                 DisplayAlert("Error", "No se ha introducido datos ", "ok");
@@ -51,7 +50,8 @@ namespace evaluacion1AlexisRobalino
         private async void BtnInformacion_Clicked2(object sender, EventArgs e)
         {
 
-           
+            var tot = double.Parse(txtNotaseg.Text) + (3000 - double.Parse(txtNotaseg.Text)) / 5 + (3000 * 1.05 - 3000) * 5;
+            txttot.Text = tot.ToString();
 
             DisplayAlert("Mensaje de Alerta", "Elemento Guardado", "Cerrar");
 
